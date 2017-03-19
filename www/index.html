@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Hair Style</h1>
+      </ion-header-bar>
+      <ion-content class="has-header padding" ng-controller="MediaCtrl">
+          <br><br>
+        <div class="item item-divider">
+            <i class="ion-images"></i>
+            Latest Trending Hair Style
+        </div>
+        <a class="item item-list-detail">
+            <ion-scroll direction="x">
+                <img ng-repeat="image in allImages" ng-src="{{image.src}}" ng-click="showImages($index)" class="image-list-thumb"/>
+            </ion-scroll>
+        </a>
+        <div class="item item-divider">
+            <i class="ion-images"></i>
+            Longer Hairstyle For Men
+        </div>
+         <a class="item item-list-detail">
+            <ion-scroll direction="x">
+                <img ng-repeat="image in Imagesc" ng-src="{{image.src}}" ng-click="showImagesc($indexm)" class="image-list-thumb"/>
+            </ion-scroll>
+        </a>
+
+        <div class="item item-divider">
+            <i class="ion-images"></i>
+            Footballer Hairstyle For Men
+        </div>
+
+        <a class="item item-list-detail">
+            <ion-scroll direction="x">
+                <img ng-repeat="image in Imagesf" ng-src="{{image.src}}" ng-click="showImagesf($indexf)" class="image-list-thumb"/>
+            </ion-scroll>
+        </a>
+
+        <div class="item item-divider">
+            <i class="ion-images"></i>
+            High Fade Haircuts For Men
+        </div>
+
+        <a class="item item-list-detail">
+            <ion-scroll direction="x">
+                <img ng-repeat="image in Imagesm" ng-src="{{image.src}}" ng-click="showImagesm($indexm)" class="image-list-thumb"/>
+            </ion-scroll>
+        </a>
+
+        <div class="item item-divider">
+            <i class="ion-images"></i>
+            Cool Haircuts with Beard For Men
+        </div>
+
+        <a class="item item-list-detail">
+            <ion-scroll direction="x">
+                <img ng-repeat="image in Imageso" ng-src="{{image.src}}" ng-click="showImageso($indexo)" class="image-list-thumb"/>
+            </ion-scroll>
+        </a>
+
+        <div class="item item-divider">
+            <i class="ion-images"></i>
+            Cool Beard For Men
+        </div>
+
+        <a class="item item-list-detail">
+            <ion-scroll direction="x">
+                <img ng-repeat="image in Imagesb" ng-src="{{image.src}}" ng-click="showImagesb($indexb)" class="image-list-thumb"/>
+            </ion-scroll>
+        </a>
+
+
+        
+    </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
